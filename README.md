@@ -1,5 +1,9 @@
 # my-window-frp-config
 
+## inner-client
+需從 frpc.ini.example 複製一份 重新命名為 frpc.ini
+再設定機密文件  
+
 
 * docker build -t frp . 
 
