@@ -1,6 +1,8 @@
 # my-window-frp-config
 
 ## Relay-Station-Docker-container
+需從 frps.ini.example 複製一份 重新命名為 frps.ini
+
 先在有對外IP的服務器上 deploy 此服務
 設定 `<token> <dashboard_user> <dashboard_pwd>` 後
 使用 `docker compose up -d --build`
@@ -30,6 +32,8 @@ windows 的本地 ip 需要先自行在本機電腦查詢出來
 
 
 ## proxy
+需從 frpc.ini.example 複製一份 重新命名為 frpc.ini
+
 此為 代理程式, 需要設定 Relay-Station-Docker-container 的 ip
 與 對應 inner-client 的服務
 
