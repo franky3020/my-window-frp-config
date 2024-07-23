@@ -5,14 +5,25 @@ protocol = websocket
 token = <token>
 
 [Windows-remote-client]
-type = stcp
+type = udp
 role = visitor
 # 以下 server_name 對應 frpc-proxy.ini 的中括號所框住的name
 server_name = Windows-remote
 bind_addr = 127.0.0.1
 bind_port = 7777
-use_encryption = false
-use_compression = false
+use_encryption = true
+use_compression = true
+
+
+[Windows-remote-client-2]
+type = tcp
+role = visitor
+# 以下 server_name 對應 frpc-proxy.ini 的中括號所框住的name
+server_name = Windows-remote-2
+bind_addr = 127.0.0.1
+bind_port = 7777
+use_encryption = true
+use_compression = true
 
 
 
@@ -26,8 +37,8 @@ use_compression = false
 ; sk=
 ; bind_addr = 127.0.0.1
 ; bind_port = 443
-; use_encryption = false
-; use_compression = false
+; use_encryption = true
+; use_compression = true
 
 
 ; [Redmine-Http-client]
@@ -40,5 +51,5 @@ use_compression = false
 
 ; bind_addr = 127.0.0.2
 ; bind_port = 80
-; use_encryption = false
-; use_compression = false
+; use_encryption = true
+; use_compression = true

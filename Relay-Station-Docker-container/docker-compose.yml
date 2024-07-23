@@ -4,5 +4,9 @@ services:
     build:
       context: ./frp-server
     ports:
-      - 8002:8002 # 如果有開udp 可以設定 8000:8000/udp
+      - 8002:8002/udp # 如果有開udp 8000:8000/udp
+      - 8002:8002     # 不設定就是預設的 tcp
+      - 8003:8003
+      - 33389:33389/udp
+      - 33389:33389
     restart: always

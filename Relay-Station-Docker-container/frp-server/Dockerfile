@@ -9,9 +9,8 @@ COPY frps.ini /root/frp/frps.ini
 WORKDIR /root/frp/
 
 # 中繼端口
-EXPOSE 8000
-
-# 監控端口, 對應Prometheus
-# EXPOSE 50099
+EXPOSE 8002
+EXPOSE 8003
+EXPOSE 33389
 
 CMD ./frps -c ./frps.ini
