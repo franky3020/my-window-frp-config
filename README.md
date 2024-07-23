@@ -6,9 +6,8 @@
 
 
 * docker build -t frp .
-
-* docker run -d frp
-
+* docker container rm -f frp
+* docker run -d --restart always --name frp frp
 
 ## 設定host
 

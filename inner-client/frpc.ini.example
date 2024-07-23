@@ -6,12 +6,20 @@ token = <token>
 
 
 [Windows-remote]
-type = stcp
-local_ip = 192.168.0.180
+type = udp
+local_ip = 192.168.33.66
 local_port = 3389
 remote_port = 33389
-use_encryption = false
-use_compression = false
+use_encryption = true
+use_compression = true
+
+[Windows-remote-2]
+type = tcp
+local_ip = 192.168.33.66
+local_port = 3389
+remote_port = 33389
+use_encryption = true
+use_compression = true
 
 [GitLab-Https]
 type = stcp
