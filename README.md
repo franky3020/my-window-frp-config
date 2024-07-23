@@ -1,7 +1,13 @@
 # my-window-frp-config
 
+## Relay-Station-Docker-container
+先在有對外IP的服務器上 deploy 此服務
+設定 `<token> <dashboard_user> <dashboard_pwd>` 後
+使用 `docker compose up -d --build`
+
+
 ## inner-client
-這是在內網 需要deploy 的, 目標是將內網的 服務 可以從外往連接
+這是在內網 需要deploy 的, 目標是將內網的 服務 可以從外網連接
 
 ```
 local_port = 3389  // 這是內網的 port
@@ -17,15 +23,19 @@ docker build -t frp .
 docker container rm -f frp
 docker run -d --restart always --name frp frp
 ```
+
 ### windows 遠端
 windows 遠端需要 有 udp 與 tcp 才能不會卡頓
 windows 的本地 ip 需要先自行在本機電腦查詢出來
 
 
-
+## proxy
+此為 代理程式, 需要設定 Relay-Station-Docker-container 的 ip
+與 對應 inner-client 的服務
 
 
 ## 設定 host 教學
+
 
 127.0.0.1 gitlab.com
 127.0.0.2 redmine.com
