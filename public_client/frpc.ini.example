@@ -1,0 +1,44 @@
+[common]
+server_addr = <ip>
+server_port = 8002
+protocol = websocket
+token = <token>
+
+[Windows-remote-client]
+type = stcp
+role = visitor
+# 以下 server_name 對應 frpc-proxy.ini 的中括號所框住的name
+server_name = Windows-remote
+bind_addr = 127.0.0.1
+bind_port = 7777
+use_encryption = false
+use_compression = false
+
+
+
+; [GitLab-Https-client]
+; type = stcp
+; role = visitor
+
+; # 以下 server_name 對應 frpc-proxy.ini 的中括號所框住的name
+; server_name = GitLab-Https
+
+; sk=
+; bind_addr = 127.0.0.1
+; bind_port = 443
+; use_encryption = false
+; use_compression = false
+
+
+; [Redmine-Http-client]
+; type = stcp
+; role = visitor
+
+
+; server_name = Redmine-Http
+; sk=
+
+; bind_addr = 127.0.0.2
+; bind_port = 80
+; use_encryption = false
+; use_compression = false
